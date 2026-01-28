@@ -1,0 +1,5 @@
+2024-01-10 10:01:05 INFO user_id=101 endpoint=/login latency=120
+2024-01-10 10:01:07 ERROR user_id=102 endpoint=/checkout latency=350
+2024-01-10 10:01:10 INFO user_id=103 endpoint=/products latency=90
+2024-01-10 10:01:12 ERROR user_id=104 endpoint=/checkout latency=420
+2024-01-10 10:01:15 INFO user_id=101 endpoint=/logout latency=60
