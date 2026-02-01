@@ -1,3 +1,4 @@
+import logging
 from datetime import datetime
 
 def parse_log_line(line):
@@ -11,10 +12,17 @@ def parse_log_line(line):
         "latency": int(parts[5].split("=")[1])
     }
 
-
 def parse_logs(file_path):
     parsed_logs = []
+
     with open(file_path, "r") as file:
         for line in file:
-            parsed_logs.append(parse_log_line(line))
+            try:
+                parsed_logs.append(parse_log_line(line))
+            except Exception as e:
+                logging.warning(
+                    f"Skipping malformed log line: {line.strip()} | Error: {e}"
+                )
+                continue
+
     return parsed_logs
