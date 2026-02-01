@@ -8,6 +8,7 @@ aggregates system-level and endpoint-level metrics, and stores results in a rela
 - Parser: Converts raw log lines into structured records
 - Aggregator: Computes request counts, error rates, and latency metrics
 - Storage: Persists aggregated metrics using SQLite
+- Graceful handling of malformed log entries without breaking the pipeline
 
 ## How to Run
 ```bash
