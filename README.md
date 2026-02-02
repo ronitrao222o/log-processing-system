@@ -9,6 +9,7 @@ aggregates system-level and endpoint-level metrics, and stores results in a rela
 - Aggregator: Computes request counts, error rates, and latency metrics
 - Storage: Persists aggregated metrics using SQLite
 - Graceful handling of malformed log entries without breaking the pipeline
+- Structured logging added to monitor parsing, aggregation, and storage stages
 
 ## How to Run
 ```bash
