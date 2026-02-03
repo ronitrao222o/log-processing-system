@@ -10,6 +10,7 @@ aggregates system-level and endpoint-level metrics, and stores results in a rela
 - Storage: Persists aggregated metrics using SQLite
 - Graceful handling of malformed log entries without breaking the pipeline
 - Structured logging added to monitor parsing, aggregation, and storage stages
+- Structured logging added to track parsing, aggregation, and storage stages
 
 ## How to Run
 ```bash
