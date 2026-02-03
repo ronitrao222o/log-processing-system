@@ -13,11 +13,11 @@ logging.basicConfig(
 def run_pipeline():
     logging.info("Log processing pipeline started")
 
-    logging.info("Parsing log file")
+    logging.info("Starting log parsing")
     parsed_logs = parse_logs(LOG_FILE)
-    logging.info(f"Parsed {len(parsed_logs)} log entries")
+    logging.info("Log parsing completed")
 
-    logging.info("Aggregating logs")
+    logging.info("Starting log aggregation")
     metrics = aggregate_logs(parsed_logs)
     logging.info("Log aggregation completed")
 
@@ -28,5 +28,4 @@ def run_pipeline():
     logging.info("Log processing pipeline completed")
 
 if __name__ == "__main__":
-    logging.info("Starting log processing application")
     run_pipeline()
