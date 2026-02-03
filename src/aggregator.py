@@ -1,6 +1,9 @@
+import logging
 from collections import defaultdict
 
 def aggregate_logs(parsed_logs):
+    logging.info("Starting log aggregation")
+
     metrics = {
         "total_requests": 0,
         "error_count": 0,
@@ -17,4 +20,5 @@ def aggregate_logs(parsed_logs):
         metrics["endpoint_stats"][endpoint]["count"] += 1
         metrics["endpoint_stats"][endpoint]["total_latency"] += log["latency"]
 
+    logging.info("Log aggregation completed")
     return metrics
