@@ -20,5 +20,11 @@ def aggregate_logs(parsed_logs):
         metrics["endpoint_stats"][endpoint]["count"] += 1
         metrics["endpoint_stats"][endpoint]["total_latency"] += log["latency"]
 
+    error_rate = 0.0
+    if metrics["total_requests"] > 0:
+        error_rate = metrics["error_count"] / metrics["total_requests"]
+
+    metrics["error_rate"] = round(error_rate, 4)
+
     logging.info("Log aggregation completed")
     return metrics
