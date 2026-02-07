@@ -11,6 +11,8 @@ aggregates system-level and endpoint-level metrics, and stores results in a rela
 - Graceful handling of malformed log entries without breaking the pipeline
 - Structured logging added to monitor parsing, aggregation, and storage stages
 - Structured logging added to track parsing, aggregation, and storage stages
+- Error rate calculation to quantify system reliability over total requests
+
 
 ## How to Run
 ```bash
