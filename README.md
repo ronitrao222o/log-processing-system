@@ -12,6 +12,7 @@ aggregates system-level and endpoint-level metrics, and stores results in a rela
 - Structured logging added to monitor parsing, aggregation, and storage stages
 - Structured logging added to track parsing, aggregation, and storage stages
 - Error rate calculation to quantify system reliability over total requests
+- 95th percentile (p95) latency metric for performance monitoring
 
 
 ## How to Run
